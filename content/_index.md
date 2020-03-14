@@ -41,3 +41,66 @@ another
 
 {{% /section %}}
 
+---
+
+<section data-noprocess>
+  <h1>Implement columns using html</h1>
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container"> 
+<div class="col">
+Column 1 Content
+Do you see it?
+</div>
+
+<div class="col">
+Column 2 Content
+This is a differnt column
+</div>
+
+<div class="col">
+Column 3 Content
+</div>
+
+<div class="col">
+Column 4 Content
+</div>
+
+</div>
+
+</section>
+
+---
+
+# Columns with shortcodes
+
+{{% container %}}
+
+{{% bfragment index=2 %}}
+{{% col flex="1" %}}
+Column 1 Content  
+Do you see it?
+{{% /col %}}
+
+{{% /bfragment %}}
+{{% bfragment index=1 %}}
+{{% col %}}
+Column 2 Content  
+This is a differnt column
+{{% /col %}}
+{{% /bfragment %}}
+
+{{% bfragment index=3 %}}
+{{% col flex="3" %}}
+Column 3 Content  
+This is a differnt column whose width is 3 times of the others.
+{{% /col %}}
+{{% /bfragment %}}
+
+{{% /container %}}

@@ -2,10 +2,6 @@
 weight = 18
 +++
 
-![](gif-image.jpg)
-
----
-
 {{% slide id="Title" %}}
 
 # Title
