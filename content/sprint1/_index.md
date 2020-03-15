@@ -16,32 +16,7 @@ slide_number = true
 
 {{% section %}}
 
-## 用户故事
-
----
-
-### icourse.club
-
-{{% bfragment %}}
-<img src="icourse.png" width="85%" class="plain" />
-{{% /bfragment %}}
-
----
-
-### nusmods
-
-{{% bfragment %}}
-<img src="nusmods.png" width="90%" class="plain" />
-{{% /bfragment %}}
-
-
-{{% /section %}}
-
----
-
-{{% section %}}
-
-## 需求分析
+## 项目目标
 
 {{% bfragment %}}
 * 课程安排功能（课程表）
@@ -52,14 +27,21 @@ slide_number = true
 
 ### 课程安排
 
+{{% container center=true %}}
+{{% col flex="1" %}}
 * 选课操作与取消操作
 * 筛选课程
+{{% /col %}}
+{{% col flex="2" %}}
+<img src="nusmods.png" width="90%" class="plain" />
+{{% /col%}}
+{{% /container %}}
 
 ---
 
 ### 课程讨论社区
 
-{{% container %}}
+{{% container center=true %}}
 {{% col flex="1" %}}
 * 提供课程信息
 * 课程评论
@@ -67,7 +49,6 @@ slide_number = true
 {{% col flex="2" %}}
 <img src="icourse.png" class="plain" />
 {{% /col%}}
-
 {{% /container %}}
 
 {{% /section %}}
@@ -76,7 +57,108 @@ slide_number = true
 
 {{% section %}}
 
-## 任务分工
+## Sprint 1 讨论结果
+
+---
+
+### 后端讨论截图
+
+{{% bfragment %}}
+<img src="sprint1-doc.png" width="40%" class="plain" />
+{{% /bfragment %}}
+
+---
+
+### 前端讨论截图
+
+{{% bfragment %}}
+<img src="sprint1-doc-frontend.png" width="45%" class="plain" />
+{{% /bfragment %}}
+
+{{% /section %}}
+
+---
+
+### 用户故事
+
+{{% bfragment %}}
+* 通过学邮注册账户
+* 查询学校的课程
+* 在课表页面查看已选课程
+* 课程页面显示课程评论
+* 用户删除自己发表的课程评论
+* 对课程评论进行回复
+{{% /bfragment %}}
+
+---
+
+### 前后端架构
+
+{{% bfragment %}}
+
+* 前端：
+  * Vue.js + Vuetify
+* 后端：
+  * node.js + nest.js
+  * MySQL
+
+{{% /bfragment %}}
+
+---
+
+{{% section %}}
+
+## API 设计
+
+---
+
+### 后端
+
+
+{{% container %}}
+{{% col %}}
+* 课程信息
+  * /course/:class_id
+  * /course/:class_id/star
+  * /course/:class_id/select
+{{% /col %}}
+
+{{% col %}}
+* 评课系统
+  * /rate/class/:class_id
+  * /rate/:rate_id
+  * /rate/:rate_id/reply
+{{% /col %}}
+{{% /container %}}
+
+---
+
+### 前端
+
+{{% container %}}
+{{% col %}}
+* 课表页面
+  * /timetable
+{{% /col %}}
+
+{{% col %}}
+* 课程评论
+  * /rate
+{{% /col %}}
+
+{{% col %}}
+* 用户信息
+  * /user
+{{% /col %}}
+{{% /container %}}
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+### 任务分工
 
 前后端以及 Scrum 团队角色
 
@@ -120,71 +202,6 @@ slide_number = true
 {{% bfragment %}}
 * Scrum Master、产品负责人：解润芃
 * 开发团队：全体成员
-{{% /bfragment %}}
-
-{{% /section %}}
-
----
-
-## 前后端架构
-
-{{% bfragment %}}
-
-* 前端：
-  * Vue.js
-* 后端：
-  * node.js + nest.js
-  * MySQL
-
-{{% /bfragment %}}
-
----
-
-{{% section %}}
-
-## API 设计
-
-具体见 [Sprint 1 讨论](#discussion)
-
----
-
-### 后端
-
-* 课程信息
-* 评课系统
-
----
-
-### 前端
-
-* 课表页面
-* 课程评论
-* 用户信息
-
-{{% /section %}}
-
----
-
-{{% section %}}
-
-{{% slide id="discussion" %}}
-
-## Sprint 1 讨论
-
----
-
-### 后端讨论
-
-{{% bfragment %}}
-<img src="sprint1-doc.png" width="40%" class="plain" />
-{{% /bfragment %}}
-
----
-
-### 前端讨论
-
-{{% bfragment %}}
-<img src="sprint1-doc-frontend.png" width="45%" class="plain" />
 {{% /bfragment %}}
 
 {{% /section %}}
