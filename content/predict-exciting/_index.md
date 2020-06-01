@@ -202,3 +202,7 @@ custom_theme_compile = true
 {{% /container %}}
 
 {{% /section %}}
+
+---
+
+## Thanks
